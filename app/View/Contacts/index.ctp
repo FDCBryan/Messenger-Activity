@@ -16,7 +16,7 @@ foreach ($otherusers as $otheruser):
                   <ul class="list-group list-group-flush">
                     <li class="list-group-item"><?php
                                 echo $this->Html->link(
-                                    'Message', array('controller' => 'messages','action' => 'index', $otheruser['User']['id'])
+                                    'Message', array('controller' => 'messages','action' => 'messages', $otheruser['User']['id'])
                                 );
                             ?></li>
                    <li class="list-group-item"><?php
