@@ -54,6 +54,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 			    </button>
 			    <div class="collapse navbar-collapse" id="navbarSupportedContent">
 			      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				  <?php if($logged_In):?>
 			        <li class="nav-item">
 			          <a class="nav-link active" aria-current="page" href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'index'));?>">Home</a>
 			        </li>
@@ -73,7 +74,9 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 			        <li class="nav-item">
 			          <input type="text" id="autocomplete" class = "form-control" placeholder="Search">
 			        </li>
+					<?php endif;?>
 			      </ul>
+				  
 			      <?php if($logged_In):?>
 			      	<span style = "color : #000">
 			      	Welcome <?php echo $Current_user['username']?>

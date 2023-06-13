@@ -40,11 +40,11 @@ foreach ($messages as $message):
             <?php
             if ($Current_user['id'] != $message['Message']['fromId']):
             ?>
-            <img src = "..\..\img\uploads\<?<?php echo $otherusers['0']['User']['profile_picture'] ?>" alt ="profile-pic-<?php echo $otherusers['0']['User']['username'] ?>" width = "50px">
+            <img src = "..\..\img\uploads\<?php echo $otherusers['0']['User']['profile_picture'] ?>" alt ="profile-pic- <?php echo $otherusers['0']['User']['username'] ?>" width = "50px">
             <?php
             else:
             ?>
-            <img src = "..\..\img\uploads\<?<?php echo $Current_user['profile_picture']?>" alt ="profile-pic-<?php echo $otherusers['0']['User']['username'] ?>" width = "50px">
+            <img src = "..\..\img\uploads\<?php echo $Current_user['profile_picture']?>" alt ="profile-pic-<?php echo $otherusers['0']['User']['username'] ?>" width = "50px">
             <?php
             endif; 
             ?>
@@ -69,14 +69,14 @@ endforeach; ?>
 
 </div>
 
-  <div class="chatbox__input">
-<?php echo $this->Form->create('Message', array('id' => 'myForm')); ?>
-    <?php echo $this->Form->input('message',array('class' => 'form-control','id' => 'textbox')); ?>
-    <!-- Submit button -->
-    <?php echo $this->Form->submit('Submit', array('class' => 'btn btn-success')); ?>
-<?php echo $this->Form->end(); ?>
+      <div class="chatbox__input">
+        <?php echo $this->Form->create('Message', array('id' => 'myForm')); ?>
+        <?php echo $this->Form->input('message',array('class' => 'form-control','id' => 'textbox')); ?>
+        <!-- Submit button -->
+        <?php echo $this->Form->submit('Submit', array('class' => 'btn btn-success')); ?>
+      <?php echo $this->Form->end(); ?>
 
-  </div>
+      </div>
 </div>
 
 <div id="parentElement">
